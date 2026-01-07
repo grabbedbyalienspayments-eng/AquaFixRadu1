@@ -1,8 +1,10 @@
-
 import { useState } from 'react';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showTerms, setShowTerms] = useState(false);
+  const [showPrivacy, setShowPrivacy] = useState(false);
+  const [showCookies, setShowCookies] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -11,13 +13,17 @@ export default function Home() {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-white font-inter">
       {/* Navigation */}
       <nav className="bg-white shadow-sm fixed w-full top-0 z-50">
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
-            <div className="flex items-center">
+            <div className="flex items-center cursor-pointer" onClick={scrollToTop}>
               <img 
                 src="https://static.readdy.ai/image/ef28c49b8616055595ccec32476a2655/7561472260b66aa8d88a3ade4a48a381.png"
                 alt="AquaFix Radu Logo"
@@ -41,7 +47,7 @@ export default function Home() {
             </div>
 
             <div className="hidden md:flex items-center space-x-4">
-              <a href="tel:0723555901" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap cursor-pointer font-semibold">
+              <a href="tel:+40764424948" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap cursor-pointer font-semibold">
                 Sună acum
               </a>
             </div>
@@ -69,7 +75,7 @@ export default function Home() {
                 <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer text-left font-medium">
                   Contact
                 </button>
-                <a href="tel:0723555901" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap cursor-pointer text-center font-semibold">
+                <a href="tel:+40764424948" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap cursor-pointer text-center font-semibold">
                   Sună acum
                 </a>
               </div>
@@ -81,7 +87,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
                style={{
-                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://readdy.ai/api/search-image?query=Young%20professional%20plumber%20in%20blue%20uniform%20with%20professional%20tools%20repairing%20a%20pipe%20in%20a%20modern%20bathroom%2C%20natural%20lighting%2C%20clean%20and%20realistic%20atmosphere%2C%20professional%20service%20worker%2C%20high%20quality%20photography%2C%20modern%20interior%20design%2C%20clean%20workspace&width=1920&height=1080&seq=hero-plumber&orientation=landscape')`
+                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/hero-image.webp')`
                }}>
         <div className="container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto">
@@ -93,10 +99,10 @@ export default function Home() {
             </h2>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-              <a href="tel:0723555901" className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap cursor-pointer">
-                Sună acum – 0723 555 901
+              <a href="tel:+40764424948" className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap cursor-pointer">
+                Sună acum – 0764 424 948
               </a>
-              <a href="https://wa.me/40723555901" className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors whitespace-nowrap cursor-pointer">
+              <a href="https://wa.me/40764424948" className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors whitespace-nowrap cursor-pointer">
                 Contactează pe WhatsApp
               </a>
             </div>
@@ -240,8 +246,7 @@ export default function Home() {
               {/* Service 5 */}
               <div className="group bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                 <div className="relative mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-purple-5
-                    00 to-purple-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <i className="ri-search-line text-3xl text-white"></i>
                   </div>
                 </div>
@@ -290,11 +295,11 @@ export default function Home() {
                 <h3 className="text-3xl font-bold mb-4 font-poppins">Ai nevoie de o intervenție rapidă?</h3>
                 <p className="text-xl mb-6 opacity-90">Contactează-mă acum pentru o evaluare gratuită și o ofertă personalizată</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="tel:0723555901" className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap cursor-pointer">
+                  <a href="tel:+40764424948" className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap cursor-pointer">
                     <i className="ri-phone-line mr-2"></i>
                     Sună acum
                   </a>
-                  <a href="https://wa.me/40723555901" className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors whitespace-nowrap cursor-pointer">
+                  <a href="https://wa.me/40764424948" className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors whitespace-nowrap cursor-pointer">
                     <i className="ri-whatsapp-line mr-2"></i>
                     WhatsApp
                   </a>
@@ -418,7 +423,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 font-poppins">Telefon</h3>
-                      <a href="tel:0723555901" className="text-blue-600 hover:text-blue-700 cursor-pointer">0723 555 901</a>
+                      <a href="tel:+40764424948" className="text-blue-600 hover:text-blue-700 cursor-pointer">0764 424 948</a>
                     </div>
                   </div>
 
@@ -434,63 +439,352 @@ export default function Home() {
 
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <i className="ri-time-line text-blue-600 text-xl"></i>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-800 font-poppins">Program</h3>
-                      <p className="text-gray-600">Luni–Duminică 08:00–20:00</p>
-                      <p className="text-gray-600">Urgențe Non-stop</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+<i className="ri-time-line text-blue-600 text-xl"></i>
+</div>
+<div>
+<h3 className="font-semibold text-gray-800 font-poppins">Program</h3>
+<p className="text-gray-600">Luni–Duminică 08:00–20:00</p>
+<p className="text-gray-600">Urgențe Non-stop</p>
+</div>
+</div>
+</div>
+</div>
               <div>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2732.8234567890123!2d23.5880556!3d46.7712101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490c1f916c0b77%3A0x1234567890abcdef!2zTcSDcsSDyJl0aSwgQ2x1ai1OYXBvY2E!5e0!3m2!1sro!2sro!4v1234567890123!5m2!1sro!2sro"
-                  width="100%"
-                  height="400"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="rounded-lg shadow-lg"
-                ></iframe>
-              </div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2732.8234567890123!2d23.5880556!3d46.7712101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490c1f916c0b77%3A0x1234567890abcdef!2zTcSDcsSDyJl0aSwgQ2x1ai1OYXBvY2E!5e0!3m2!1sro!2sro!4v1234567890123!5m2!1sro!2sro"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-lg shadow-lg"
+            ></iframe>
           </div>
         </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-blue-900 text-white py-8">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <p className="mb-2">
-              © 2025 AquaFix Radu – Instalator în Cluj-Napoca | Toate drepturile rezervate.
-            </p>
-            <p className="text-blue-200">
-              <a href="https://www.youtube.com" className="hover:text-white transition-colors cursor-pointer">
-                AAA DESIGN
-              </a>
-            </p>
-          </div>
-        </div>
-      </footer>
-
-      {/* Fixed Call Button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <a href="tel:0723555901" className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors cursor-pointer block">
-          <i className="ri-phone-line text-2xl"></i>
-        </a>
-      </div>
-
-      {/* Fixed WhatsApp Button */}
-      <div className="fixed bottom-6 left-6 z-50">
-        <a href="https://wa.me/40723555901" className="bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition-colors cursor-pointer block">
-          <i className="ri-whatsapp-line text-2xl"></i>
-        </a>
       </div>
     </div>
-  );
+  </section>
+
+  {/* Footer */}
+  <footer className="bg-blue-900 text-white py-12">
+    <div className="container mx-auto px-4">
+      <div className="max-w-6xl mx-auto">
+        {/* Footer Links */}
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h3 className="text-xl font-bold mb-4 font-poppins">AquaFix Radu</h3>
+            <p className="text-blue-200 mb-4">
+              Instalator profesionist în Cluj-Napoca cu servicii rapide și de calitate.
+            </p>
+            <div className="flex space-x-4">
+              <a href="tel:+40764424948" className="text-blue-200 hover:text-white transition-colors">
+                <i className="ri-phone-line text-2xl"></i>
+              </a>
+              <a href="https://wa.me/40764424948" className="text-blue-200 hover:text-white transition-colors">
+                <i className="ri-whatsapp-line text-2xl"></i>
+              </a>
+              <a href="mailto:contact@aquafixradu.ro" className="text-blue-200 hover:text-white transition-colors">
+                <i className="ri-mail-line text-2xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold mb-4 font-poppins">Pagini Legale</h3>
+            <ul className="space-y-2">
+              <li>
+                <button onClick={() => setShowTerms(true)} className="text-blue-200 hover:text-white transition-colors cursor-pointer">
+                  Termeni și Condiții
+                </button>
+              </li>
+              <li>
+                <button onClick={() => setShowPrivacy(true)} className="text-blue-200 hover:text-white transition-colors cursor-pointer">
+                  Politica de Confidențialitate
+                </button>
+              </li>
+              <li>
+                <button onClick={() => setShowCookies(true)} className="text-blue-200 hover:text-white transition-colors cursor-pointer">
+                  Politica Cookies
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold mb-4 font-poppins">Contact Rapid</h3>
+            <p className="text-blue-200 mb-2">Telefon: 0764 424 948</p>
+            <p className="text-blue-200 mb-2">Email: contact@aquafixradu.ro</p>
+            <p className="text-blue-200">Cluj-Napoca, Mărăști</p>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="border-t border-blue-800 pt-8 text-center">
+          <p className="mb-2 text-blue-200">
+            © 2026 AquaFix Radu – Instalator în Cluj-Napoca | Toate drepturile rezervate.
+          </p>
+          <p className="text-blue-200">
+            Creat de{' '}
+            <a 
+              href="https://www.websiteon.ro" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white hover:text-blue-300 transition-colors font-semibold cursor-pointer"
+            >
+              WebsiteON
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  {/* Legal Modals */}
+  {showTerms && (
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" onClick={() => setShowTerms(false)}>
+      <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto p-8" onClick={(e) => e.stopPropagation()}>
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-3xl font-bold text-gray-800 font-poppins">Termeni și Condiții</h2>
+          <button onClick={() => setShowTerms(false)} className="text-gray-500 hover:text-gray-700">
+            <i className="ri-close-line text-3xl"></i>
+          </button>
+        </div>
+        <div className="prose max-w-none text-gray-600 space-y-4">
+          <p><strong>Data ultimei actualizări:</strong> 08 Ianuarie 2026</p>
+          
+          <h3 className="text-xl font-bold text-gray-800 mt-6">1. Acceptarea Termenilor</h3>
+          <p>
+            Prin accesarea și utilizarea serviciilor AquaFix Radu, acceptați să respectați acești termeni și condiții. 
+            Dacă nu sunteți de acord cu aceștii termeni, vă rugăm să nu utilizați serviciile noastre.
+          </p>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">2. Servicii Oferite</h3>
+          <p>
+            AquaFix Radu oferă servicii profesionale de instalații sanitare în Cluj-Napoca și împrejurimi, incluzând 
+            dar nelimitându-se la: montaj și reparații robineți, montaj chiuvete și obiecte sanitare, intervenții urgente, 
+            deblocare scurgeri, detectare pierderi de apă și înlocuire instalații vechi.
+          </p>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">3. Programări și Anulări</h3>
+          <p>
+            Programările se fac telefonic sau prin WhatsApp. În cazul unei anulări, vă rugăm să ne anunțați cu cel puțin 
+            2 ore înainte de ora programată pentru a evita taxe de anulare.
+          </p>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">4. Prețuri și Plăți</h3>
+          <p>
+            Toate prețurile sunt comunicate transparent înainte de începerea lucrărilor. Plata se efectuează la finalizarea 
+            lucrării, în numerar sau prin transfer bancar. Emitem factură fiscală la cerere.
+          </p>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">5. Garanție</h3>
+          <p>
+            Oferim garanție pentru toate lucrările efectuate, conform legislației în vigoare. Durata garanției variază 
+            în funcție de tipul lucrării și va fi specificată în contract sau pe factură.
+          </p>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">6. Limitarea Răspunderii</h3>
+          <p>
+            AquaFix Radu nu își asumă responsabilitatea pentru daune preexistente sau pentru situații ce nu pot fi 
+            previzionate la momentul evaluării inițiale. Clientul este responsabil pentru asigurarea accesului la 
+            locația lucrării și pentru furnizarea informațiilor corecte despre problema existentă.
+          </p>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">7. Modificări ale Termenilor</h3>
+          <p>
+            Ne rezervăm dreptul de a modifica acești termeni și condiții în orice moment. Modificările vor fi publicate 
+            pe acest site și vor intra în vigoare imediat după publicare.
+          </p>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">8. Contact</h3>
+          <p>
+            Pentru orice întrebări privind acești termeni și condiții, vă rugăm să ne contactați la:
+            <br />Telefon: 0764 424 948
+            <br />Email: contact@aquafixradu.ro
+          </p>
+        </div>
+      </div>
+    </div>
+  )}
+
+  {showPrivacy && (
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" onClick={() => setShowPrivacy(false)}>
+      <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto p-8" onClick={(e) => e.stopPropagation()}>
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-3xl font-bold text-gray-800 font-poppins">Politica de Confidențialitate</h2>
+          <button onClick={() => setShowPrivacy(false)} className="text-gray-500 hover:text-gray-700">
+            <i className="ri-close-line text-3xl"></i>
+          </button>
+        </div>
+        <div className="prose max-w-none text-gray-600 space-y-4">
+          <p><strong>Data ultimei actualizări:</strong> 08 Ianuarie 2026</p>
+          
+          <h3 className="text-xl font-bold text-gray-800 mt-6">1. Introducere</h3>
+          <p>
+            AquaFix Radu respectă confidențialitatea datelor dumneavoastră personale și se angajează să le protejeze 
+            în conformitate cu Regulamentul General privind Protecția Datelor (GDPR) și legislația română aplicabilă.
+          </p>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">2. Date Colectate</h3>
+          <p>
+            Colectăm următoarele categorii de date personale:
+          </p>
+          <ul className="list-disc pl-6">
+            <li>Date de identificare: nume, prenume</li>
+            <li>Date de contact: număr de telefon, adresă email, adresă fizică</li>
+            <li>Date despre serviciile solicitate și istoricul lucrărilor</li>
+            <li>Date de facturare și plată</li>
+          </ul>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">3. Scopul Prelucrării Datelor</h3>
+          <p>
+            Datele dumneavoastră personale sunt prelucrate pentru:
+          </p>
+          <ul className="list-disc pl-6">
+            <li>Furnizarea serviciilor de instalații sanitare</li>
+            <li>Comunicarea cu clienții și programarea intervențiilor</li>
+            <li>Emiterea facturilor și gestionarea plăților</li>
+            <li>Îmbunătățirea calității serviciilor</li>
+            <li>Respectarea obligațiilor legale</li>
+          </ul>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">4. Partajarea Datelor</h3>
+          <p>
+            Nu vindem, nu închiriem și nu partajăm datele dumneavoastră personale cu terțe părți, cu excepția:
+          </p>
+          <ul className="list-disc pl-6">
+            <li>Furnizorilor de servicii esențiale (contabilitate, servicii IT)</li>
+            <li>Autorităților competente, când legea o impune</li>
+          </ul>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">5. Drepturile Dumneavoastră</h3>
+          <p>
+            Conform GDPR, aveți următoarele drepturi:
+          </p>
+          <ul className="list-disc pl-6">
+            <li>Dreptul de acces la datele personale</li>
+            <li>Dreptul de rectificare a datelor incorecte</li>
+            <li>Dreptul de ștergere a datelor ("dreptul de a fi uitat")</li>
+            <li>Dreptul de restricționare a prelucrării</li>
+            <li>Dreptul la portabilitatea datelor</li>
+            <li>Dreptul de opoziție la prelucrare</li>
+            <li>Dreptul de a depune plângere la ANSPDCP</li>
+          </ul>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">6. Securitatea Datelor</h3>
+          <p>
+            Implementăm măsuri tehnice și organizatorice adecvate pentru a proteja datele dumneavoastră împotriva 
+            accesului neautorizat, pierderii sau distrugerii.
+          </p>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">7. Perioada de Stocare</h3>
+          <p>
+            Datele personale sunt păstrate pe perioada necesară pentru îndeplinirea scopurilor pentru care au fost 
+            colectate și conform obligațiilor legale (minim 10 ani pentru documentele fiscale).
+          </p>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">8. Contact</h3>
+          <p>
+            Pentru exercitarea drepturilor sau pentru întrebări despre prelucrarea datelor:
+            <br />Email: contact@aquafixradu.ro
+            <br />Telefon: 0764 424 948
+          </p>
+        </div>
+      </div>
+    </div>
+  )}
+
+  {showCookies && (
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" onClick={() => setShowCookies(false)}>
+      <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto p-8" onClick={(e) => e.stopPropagation()}>
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-3xl font-bold text-gray-800 font-poppins">Politica Cookies</h2>
+          <button onClick={() => setShowCookies(false)} className="text-gray-500 hover:text-gray-700">
+            <i className="ri-close-line text-3xl"></i>
+          </button>
+        </div>
+        <div className="prose max-w-none text-gray-600 space-y-4">
+          <p><strong>Data ultimei actualizării:</strong> 08 Ianuarie 2026</p>
+          
+          <h3 className="text-xl font-bold text-gray-800 mt-6">1. Ce sunt Cookies?</h3>
+          <p>
+            Cookie-urile sunt fișiere text mici stocate pe dispozitivul dumneavoastră când vizitați un site web. 
+            Acestea ajută site-ul să funcționeze eficient și să îmbunătățească experiența utilizatorului.
+          </p>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">2. Tipuri de Cookies Utilizate</h3>
+          
+          <h4 className="text-lg font-semibold text-gray-800 mt-4">2.1. Cookies Esențiale</h4>
+          <p>
+            Acestea sunt necesare pentru funcționarea de bază a site-ului și nu pot fi dezactivate. Ele nu stochează 
+            informații personal identificabile.
+          </p>
+
+          <h4 className="text-lg font-semibold text-gray-800 mt-4">2.2. Cookies de Performanță</h4>
+          <p>
+            Ne ajută să înțelegem cum utilizați site-ul nostru, permițându-ne să îmbunătățim funcționalitatea și 
+            experiența utilizatorului.
+          </p>
+
+          <h4 className="text-lg font-semibold text-gray-800 mt-4">2.3. Cookies Terțe Părți</h4>
+          <p>
+            Site-ul nostru poate utiliza servicii terțe (Google Maps pentru localizare) care plasează propriile cookie-uri.
+          </p>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">3. Scopul Utilizării Cookies</h3>
+          <ul className="list-disc pl-6">
+            <li>Asigurarea funcționării corecte a site-ului</li>
+            <li>Îmbunătățirea experienței utilizatorului</li>
+            <li>Analiza traficului pe site</li>
+            <li>Afișarea hărții pentru localizare</li>
+          </ul>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">4. Gestionarea Cookies</h3>
+          <p>
+            Puteți controla și/sau șterge cookie-urile după preferințe. Puteți șterge toate cookie-urile deja prezente 
+            pe computer și puteți seta majoritatea browserelor să le blocheze. Totuși, acest lucru poate necesita 
+            ajustarea manuală a unor preferințe de fiecare dată când vizitați un site.
+          </p>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">5. Instrucțiuni pentru Gestionarea Cookies</h3>
+          <ul className="list-disc pl-6">
+            <li><strong>Google Chrome:</strong> Setări → Confidențialitate și securitate → Cookies</li>
+            <li><strong>Mozilla Firefox:</strong> Opțiuni → Confidențialitate și securitate</li>
+            <li><strong>Safari:</strong> Preferințe → Confidențialitate</li>
+            <li><strong>Microsoft Edge:</strong> Setări → Confidențialitate și servicii</li>
+          </ul>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">6. Modificări ale Politicii</h3>
+          <p>
+            Ne rezervăm dreptul de a modifica această politică de cookies. Orice modificări vor fi publicate pe această 
+            pagină cu data actualizării.
+          </p>
+
+          <h3 className="text-xl font-bold text-gray-800 mt-6">7. Contact</h3>
+          <p>
+            Pentru întrebări despre utilizarea cookies:
+            <br />Email: contact@aquafixradu.ro
+            <br />Telefon: 0764 424 948
+          </p>
+        </div>
+      </div>
+    </div>
+  )}
+
+  {/* Fixed Call Button */}
+  <div className="fixed bottom-6 right-6 z-50">
+    <a href="tel:+40764424948" className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors cursor-pointer block">
+      <i className="ri-phone-line text-2xl"></i>
+    </a>
+  </div>
+
+  {/* Fixed WhatsApp Button */}
+  <div className="fixed bottom-6 left-6 z-50">
+    <a href="https://wa.me/40764424948" className="bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition-colors cursor-pointer block">
+      <i className="ri-whatsapp-line text-2xl"></i>
+    </a>
+  </div>
+</div>
+    );
 }
