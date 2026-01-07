@@ -100,7 +100,7 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <a href="tel:+40764424948" className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap cursor-pointer">
-                Sună acum – 0764 424 948
+                Sună acum – 070 000 000
               </a>
               <a href="https://wa.me/40764424948" className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors whitespace-nowrap cursor-pointer">
                 Contactează pe WhatsApp
@@ -423,7 +423,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 font-poppins">Telefon</h3>
-                      <a href="tel:+40764424948" className="text-blue-600 hover:text-blue-700 cursor-pointer">0764 424 948</a>
+                      <a href="tel:+40764424948" className="text-blue-600 hover:text-blue-700 cursor-pointer">070 000 000</a>
                     </div>
                   </div>
 
@@ -513,7 +513,7 @@ export default function Home() {
 
           <div>
             <h3 className="text-xl font-bold mb-4 font-poppins">Contact Rapid</h3>
-            <p className="text-blue-200 mb-2">Telefon: 0764 424 948</p>
+            <p className="text-blue-200 mb-2">Telefon: 070 000 000</p>
             <p className="text-blue-200 mb-2">Email: contact@aquafixradu.ro</p>
             <p className="text-blue-200">Cluj-Napoca, Mărăști</p>
           </div>
@@ -600,7 +600,7 @@ export default function Home() {
           <h3 className="text-xl font-bold text-gray-800 mt-6">8. Contact</h3>
           <p>
             Pentru orice întrebări privind acești termeni și condiții, vă rugăm să ne contactați la:
-            <br />Telefon: 0764 424 948
+            <br />Telefon: 070 000 000
             <br />Email: contact@aquafixradu.ro
           </p>
         </div>
@@ -688,7 +688,7 @@ export default function Home() {
           <p>
             Pentru exercitarea drepturilor sau pentru întrebări despre prelucrarea datelor:
             <br />Email: contact@aquafixradu.ro
-            <br />Telefon: 0764 424 948
+            <br />Telefon: 070 000 000
           </p>
         </div>
       </div>
@@ -765,7 +765,7 @@ export default function Home() {
           <p>
             Pentru întrebări despre utilizarea cookies:
             <br />Email: contact@aquafixradu.ro
-            <br />Telefon: 0764 424 948
+            <br />Telefon: 070 000 000
           </p>
         </div>
       </div>
