@@ -48,7 +48,7 @@ export default function Home() {
             </div>
 
             <div className="hidden md:flex items-center space-x-4">
-              <a href="tel:+40764424948" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap cursor-pointer font-semibold">
+              <a href="tel:+40700000000" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap cursor-pointer font-semibold">
                 Sună acum
               </a>
             </div>
@@ -82,7 +82,7 @@ export default function Home() {
               <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg font-medium">
                 Contact
               </button>
-              <a href="tel:+40764424948" className="block bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center font-semibold">
+              <a href="tel:+40700000000" className="block bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center font-semibold">
                 Sună acum
               </a>
             </div>
@@ -105,10 +105,10 @@ export default function Home() {
             </h2>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-              <a href="tel:+40764424948" className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap cursor-pointer">
+              <a href="tel:+40700000000" className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap cursor-pointer">
                 Sună acum – 070 000 000
               </a>
-              <a href="https://wa.me/40764424948" className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors whitespace-nowrap cursor-pointer">
+              <a href="https://wa.me/40700000000" className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors whitespace-nowrap cursor-pointer">
                 Contactează pe WhatsApp
               </a>
             </div>
@@ -301,11 +301,11 @@ export default function Home() {
                 <h3 className="text-3xl font-bold mb-4 font-poppins">Ai nevoie de o intervenție rapidă?</h3>
                 <p className="text-xl mb-6 opacity-90">Contactează-mă acum pentru o evaluare gratuită și o ofertă personalizată</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="tel:+40764424948" className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap cursor-pointer">
+                  <a href="tel:+40700000000" className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap cursor-pointer">
                     <i className="ri-phone-line mr-2"></i>
                     Sună acum
                   </a>
-                  <a href="https://wa.me/40764424948" className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors whitespace-nowrap cursor-pointer">
+                  <a href="https://wa.me/40700000000" className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors whitespace-nowrap cursor-pointer">
                     <i className="ri-whatsapp-line mr-2"></i>
                     WhatsApp
                   </a>
@@ -429,7 +429,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 font-poppins">Telefon</h3>
-                      <a href="tel:+40764424948" className="text-blue-600 hover:text-blue-700 cursor-pointer">070 000 000</a>
+                      <a href="tel:+40700000000" className="text-blue-600 hover:text-blue-700 cursor-pointer">070 000 000</a>
                     </div>
                   </div>
 
@@ -485,10 +485,10 @@ export default function Home() {
                   Instalator profesionist în Cluj-Napoca cu servicii rapide și de calitate.
                 </p>
                 <div className="flex space-x-4">
-                  <a href="tel:+40764424948" className="text-blue-200 hover:text-white transition-colors">
+                  <a href="tel:+40700000000" className="text-blue-200 hover:text-white transition-colors">
                     <i className="ri-phone-line text-2xl"></i>
                   </a>
-                  <a href="https://wa.me/40764424948" className="text-blue-200 hover:text-white transition-colors">
+                  <a href="https://wa.me/40700000000" className="text-blue-200 hover:text-white transition-colors">
                     <i className="ri-whatsapp-line text-2xl"></i>
                   </a>
                   <a href="mailto:contact@aquafixradu.ro" className="text-blue-200 hover:text-white transition-colors">
@@ -781,14 +781,14 @@ export default function Home() {
 
       {/* Fixed Call Button */}
       <div className="fixed bottom-6 right-6 z-50">
-        <a href="tel:+40764424948" className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors cursor-pointer block">
+        <a href="tel:+40700000000" className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors cursor-pointer block">
           <i className="ri-phone-line text-2xl"></i>
         </a>
       </div>
 
       {/* Fixed WhatsApp Button */}
       <div className="fixed bottom-6 left-6 z-50">
-        <a href="https://wa.me/40764424948" className="bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition-colors cursor-pointer block">
+        <a href="https://wa.me/40700000000" className="bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition-colors cursor-pointer block">
           <i className="ri-whatsapp-line text-2xl"></i>
         </a>
       </div>
